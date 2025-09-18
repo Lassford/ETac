@@ -175,113 +175,131 @@
 
 <section class="section">
   <div class="container">
-    
+    <div class="columns is-centered has-text-centered">
     <div class="item" >
       <h2 class="title is-size-2">
         <strong>High Fidelity Deformation Estimation</strong>  
       </h2> 
-      <br>
-      <h2 class="subtitle is-size-3 ">
-        <strong>Flat Elastomer</strong>  
+      <h2 class="has-text-centered is-size-4">
+        We evaluate ETac's simulation quality by estimating sensor elastomer deformation. Indentation experiments are conducted on two elastomer types: a flat elastomer and a curved BioTac-style elastomer.
       </h2>
+
+      <hr style="margin-top:0px">
+
       <figure class="image has-image-centered">
         <img 
           src="static/gifs/ind-flat.gif" 
         >
       </figure>
       <br>
-      <h2 class="subtitle is-size-3 ">
-        <strong>Curved Elastomer</strong>  
-      </h2>
       <figure class="image has-image-centered">
         <img 
           src="static/gifs/ind-curved.gif" 
         >
       </figure>
+      <h2 class="subtitle is-size-4 has-text-centered">
+          <strong>Comparison of elastomer surface deformation & displacement fields estimated by ETac and FEM. </strong> Arrows show node-wise displacement direction and magnitude, with color shifting to red as z-axis displacement increases.
+        </h2>
       <!-- <p class="content is-size-4 has-text-centered">
         Leveraging the lightweight deformation propagation model, ETac enables real-time tactile feedback simulation, delivering spatially extensive and densely distributed responses for dexterous manipulators.
       </p> -->
     </div>
-
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    
+    <div class="columns is-centered has-text-centered">
     <div class="item" >
       <h2 class="title is-size-2">
         <strong>ETac + Dexterous Manipulators: Large-area Tactile Sensing</strong>  
-      </h2> <br>
+      </h2> 
+      <hr style="margin-top:0px">
       <figure class="image has-image-centered">
         <img 
           src="static/gifs/exp22.gif" 
         >
       </figure>
+      <h2 class="subtitle is-size-4 has-text-centered">
+          During contact-rich interactions, ETac enables large-area tactile sensing simulation for dexterous manipulators.
+        </h2>
       <!-- <p class="content is-size-4 has-text-centered">
         ETac enables real-time tactile feedback simulation, delivering spatially extensive and densely distributed responses for dexterous manipulators.
       </p> -->
     </div>
-
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    
+    <div class="columns is-centered has-text-centered">
     <div class="item" >
       <h2 class="title is-size-2">
         <strong>Simulating Real Sensors</strong>  
       </h2>
-      <br>
+      <h2 class="has-text-centered is-size-4">
+        Next, we verified that the elastomer surface deformation simulated by ETac can be used to predict real sensor outputs.
+      </h2>
+      <hr style="margin-top:0px">
       <figure class="image has-image-centered">
         <img 
           src="static/images/toreal.jpg" 
         >
       </figure>
-      <!-- <p class="content is-size-4 has-text-centered">
-        We validated ETac's ability to simulate tactile sensors by equipping them in real and simulated settings, recording real sensor readings and surface deformations from ETac and FEM. 
+      <p class="content is-size-4 has-text-centered">
+        We equipped tactile sensors (one with flat elastomer layer and another curved) in real and simulated settings, recording real sensor readings and surface deformations from ETac and FEM. 
         A PointNet model was trained to map displacement fields to sensor responses.
-      </p> -->
+      </p>
 
-      <h2 class="title is-size-3 ">
-        <strong>Flat Sensor</strong>  
-      </h2>
+
       <figure class="image has-image-centered">
         <img 
           src="static/gifs/real-flat.gif" 
         >
       </figure>
 
-      <h2 class="title is-size-3 ">
-        <strong>Curved Sensor</strong>  
-      </h2>
       <figure class="image has-image-centered">
         <img 
           src="static/gifs/real-curved.gif" 
         >
       </figure>
+      <h2 class="subtitle is-size-4 has-text-centered">
+          <strong>Predicting signals of real sensors. </strong> Here we demonstrate the time series response of the most heavily loaded taxel and the outputs of all eight taxels at peak load.
+           ``Unseen Trajectory'' denotes novel loading patterns with seen indenters.
+        </h2>
       <!-- <p class="content is-size-4 has-text-centered">
         Leveraging the lightweight deformation propagation model, ETac enables real-time tactile feedback simulation, delivering spatially extensive and densely distributed responses for dexterous manipulators.
       </p> -->
     </div>
-
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    
+    <div class="columns is-centered has-text-centered">
     <div class="item" >
       <h2 class="title is-size-2">
         <strong>RL Validation: Blind Grasp</strong>  
       </h2>
-      <br>
+      <hr style="margin-top:0px">
+
+      <h2 class="subtitle is-size-4 has-text-centered">
+          We next evaluated ETac's effectiveness for training reinforcement learning policies in a vision-deprived blind grasping task, whose objective is to
+      manipulate and grasp a variety of objects according solely robot proprioception and tactile feedback.
+        </h2>
+      
       <figure class="image has-image-centered">
         <img 
           src="static/gifs/scale.gif" 
         >
       </figure>
+      <h2 class="subtitle is-size-4 has-text-centered">
+          When simulating 1000 sensing nodes on the front side of the hand, 
+          ETac achieves a total throughput of 869 FPS across 4,096 parallel environments (on a single RTX 4090 GPU). 
+        </h2>
       <!-- <figure class="image has-image-centered">
         <img 
           src="static/images/process.jpg" 
@@ -291,7 +309,7 @@
         Qualitative results of blind grasping policy. The hand continuously adjusted its pose based on tactile feedback, gradually enclosed and ultimately lifted the object.
       </p> -->
     </div>
-
+    </div>
   </div>
 </section>
 
@@ -309,8 +327,7 @@
           </figure>
         <!-- <img src="static/images/performance.jpg" alt="MY ALT TEXT"/> -->
         <h2 class="subtitle is-size-4 has-text-centered">
-          <strong>RL training performances.</strong> When simulating 1000 sensing nodes on the front side of the hand, 
-          ETac achieves a total throughput of 869 FPS across 4,096 parallel environments (on a single RTX 4090 GPU). 
+          Comparison of RL training performances.
         </h2>
       </div>
       <div class="item">
